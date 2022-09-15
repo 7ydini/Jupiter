@@ -23,9 +23,9 @@ public class BubbleSort {
             swapped = false;
             for (int i = 0; i < arraySize - j; i++) {       // n*(n-1)/2
                 if (arr[i] > arr[i + 1]) {                  // n*(n-1)/2
-                    swap(i, i + 1);                         //T(n) = C1 * n + C2 * n*(n-1)/2 + C3 * n*(n-1)/2 =
-                    swapped = true;                         //T(n) = C1 * n + C2 * (n^2 - n)/2 + C3 * (n^2 - n)/2 =  |C2 = C2/2 - новая константа, C3 = C3/2 - новая константа.|
-                }                                           //T(n) = C1*n + C2*n^2 - C2*n + C3*n^2 - C3*n =
+                    swap(i, i + 1);                         //T(n) = C1 * n + C2 * n*(n-1)/2 + C3 * n*(n-1)/2
+                    swapped = true;                         //T(n) = C1 * n + C2 * (n^2 - n)/2 + C3 * (n^2 - n)/2    |C2 = C2/2 - новая константа, C3 = C3/2 - новая константа.|
+                }                                           //T(n) = C1*n + C2*n^2 - C2*n + C3*n^2 - C3*n
             }                                               //T(n) = n^2(C2 + C3) + n*(C1 - C2 - C3)
         }                                                   //O(n^2) - асимптотическая сложность алгоритма
     }
